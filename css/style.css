@@ -1,0 +1,588 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 91px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+}
+
+.section-title {
+  margin-top: 8rem;
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.underline {
+  margin: 0 auto 40px;
+  margin-bottom: 5rem;
+  width: 10rem;
+  height: 4px;
+  background-color: gold;
+}
+
+.navbar-brand img {
+  width: 300px;
+}
+
+.nav-link {
+  position: relative;
+  font-size: 2.2rem;
+  margin-right: 1.6rem;
+  color: #000;
+}
+
+.nav-link::before {
+  transition: 0.3s;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #0e5664;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+  overflow: hidden;
+}
+.header .leaf {
+  position: absolute;
+  width: 500px;
+  left: -350px;
+  transform: rotate(-10deg);
+  z-index: -1;
+  display: none;
+}
+.header .leaf-2 {
+  position: absolute;
+  right: -320px;
+  width: 500px;
+  transform: rotate(-190deg);
+  display: none;
+}
+.header .one {
+  padding: 3rem;
+}
+.header .one img {
+  width: 250px;
+  margin-bottom: 2rem;
+  transition: 0.3s;
+}
+.header .one img:hover {
+  transform: scale(1.2);
+}
+.header .one h1 {
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+.header .one h2 {
+  font-size: 5rem;
+  font-weight: bold;
+}
+.header .one p {
+  margin-top: 3rem;
+  font-size: 1.8rem;
+}
+.header .one .btn {
+  margin-top: 2rem;
+  font-size: 2rem;
+  border: 1px solid black;
+  padding: 1rem 3rem;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.header .one .btn:hover {
+  background-color: #0e5664;
+  color: white;
+}
+.header .one .btn-one {
+  margin-right: 1.5rem;
+  background-color: gold;
+  font-weight: bolder;
+}
+.header .two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .two img {
+  width: 60%;
+}
+
+.info-card {
+  padding: 2rem 0;
+  margin-top: 3rem;
+  background-color: gold;
+}
+.info-card .info-cards {
+  padding: 2rem 0;
+}
+.info-card .info-cards img {
+  width: 100px;
+  margin-bottom: 2rem;
+}
+.info-card .info-cards .aboutus-card-text {
+  font-size: 2rem;
+}
+
+.method {
+  margin: 5rem 0;
+}
+.method .box {
+  margin: 5rem 0;
+  padding: 1.5rem;
+  background-color: #0e5664;
+  color: #fff;
+  border-radius: 2rem;
+}
+.method .box .box-main-text {
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.method .box .box-text {
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+}
+.method .box span {
+  padding-left: 0.7rem;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: rgba(255, 215, 0, 0.6);
+  border-radius: 50%;
+}
+.method .leaf-3 {
+  margin: 5rem 0;
+  display: none;
+}
+.method .offers-box {
+  position: relative;
+  overflow: hidden;
+}
+.method .offers-box .option {
+  margin: 1.5em 0;
+  background-color: #0e5664;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.method .offers-box .option-img {
+  width: 100%;
+  transition: transform 0.3s;
+}
+.method .offers-box .option-img:hover {
+  transform: scale(1.1);
+}
+.method .offers-box .option-info {
+  padding: 2em;
+  z-index: 10;
+}
+.method .offers-box .option-text {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+.method .offers-box .option-text span {
+  font-weight: 900;
+}
+
+.method-second {
+  margin-top: 5rem;
+  padding-bottom: 5rem;
+  text-align: center;
+  color: #0e5664;
+  background-color: gold;
+}
+.method-second .underline {
+  background-color: #0e5664;
+}
+.method-second .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.method-second .container .method-img {
+  margin: 2rem 0;
+  width: 100%;
+}
+.method-second .container .method-img-desktop {
+  margin: 2rem 0;
+  width: 70%;
+  display: none;
+}
+.method-second .container .btn {
+  margin-top: 3rem;
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid black;
+  transition: 0.3s;
+}
+.method-second .container .btn:hover {
+  background-color: #0e5664;
+  color: #fff;
+}
+.method-second span {
+  font-weight: 900;
+}
+
+.programs {
+  position: relative;
+  background-image: url("../img/tło-shadow.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.programs .section-title {
+  margin-top: 0;
+  padding-top: 6rem;
+  color: #fff;
+}
+.programs .container .programs-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.programs .container .programs-box .one {
+  background-color: #0e5664;
+}
+.programs .container .programs-box .two {
+  background-color: #640e56;
+}
+.programs .container .programs-box .programs-card {
+  margin: 2rem 4rem;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px black;
+  z-index: 10;
+}
+.programs .container .programs-box .programs-card .title-card {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.programs .container .programs-box .programs-card .text-card {
+  font-size: 2.2rem;
+}
+.programs .container .programs-box .programs-card .img-card {
+  padding: 3rem 0;
+  width: 70%;
+  transition: 0.3s;
+}
+.programs .container .programs-box .programs-card .img-card:hover {
+  transform: scale(1.1);
+}
+.programs .container .programs-box .programs-card .btn {
+  margin-top: 1rem;
+  font-size: 2.2rem;
+  padding: 1rem 4rem;
+  background-color: gold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.programs .container .programs-box .programs-card .btn:hover {
+  color: #000;
+  background-color: rgb(204, 173, 0);
+}
+
+.benefits {
+  background-color: gold;
+}
+.benefits .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.benefits .btn {
+  margin: 4rem 0;
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid black;
+  transition: 0.3s;
+}
+.benefits .btn:hover {
+  background-color: #0e5664;
+  color: #fff;
+}
+.benefits .section-title {
+  margin-top: 0;
+  padding-top: 6rem;
+}
+.benefits .underline {
+  background-color: #000;
+}
+.benefits .box .info-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.benefits .box .info-box .info-box-img {
+  width: 40%;
+}
+.benefits .box .info-box .info-box-text {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.aboutme .section-title {
+  padding: 2rem;
+}
+.aboutme .box-aboutme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.aboutme .box-aboutme .img-aboutme {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.aboutme .box-aboutme .text-aboutme {
+  margin: 2rem 0;
+  text-align: center;
+}
+.aboutme .box-aboutme .text-aboutme span {
+  font-weight: 900;
+}
+.aboutme .aboutme-more {
+  margin: 2rem 0;
+  text-decoration: none;
+  color: #0e5664;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@media (min-width: 576px) {
+  .offers-box .option {
+    display: flex;
+    margin: 2em 0;
+    width: 100%;
+  }
+  .offers-box .option .option-img {
+    width: 50%;
+    height: auto;
+  }
+  .offers-box .option .right {
+    order: 1;
+  }
+  .offers-box .option .option-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .method-second {
+    font-size: 1.8rem;
+  }
+  .method-second .container .method-img {
+    width: 80%;
+  }
+  .benefits .box .info-box .info-box-img {
+    margin-top: 2rem;
+    width: 20%;
+  }
+  .benefits .box .info-box .info-box-text {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+  .aboutme .section-title {
+    padding: 2rem;
+  }
+  .aboutme .box-aboutme .img-aboutme {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+  .aboutme .box-aboutme .text-aboutme {
+    margin: 2rem 0;
+  }
+}
+@media (min-width: 768px) {
+  .programs .container .programs-box {
+    flex-direction: row;
+  }
+  .aboutme .box-aboutme .img-aboutme {
+    width: 60%;
+  }
+}
+@media (min-width: 992px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+  }
+  .header .leaf {
+    display: block;
+  }
+  .header .leaf-2 {
+    display: block;
+  }
+  .header .one {
+    width: 50%;
+  }
+  .header .two {
+    width: 50%;
+  }
+  .method .box {
+    padding: 6rem;
+  }
+  .method .box .box-main-text {
+    font-size: 2.8rem;
+    margin-bottom: 6rem;
+  }
+  .method .box .box-text {
+    font-size: 2rem;
+  }
+  .method .offers-box .option .option-img {
+    height: 300px;
+  }
+  .method .offers-box .option .option-text {
+    font-size: 2rem;
+  }
+  .method-second {
+    font-size: 2rem;
+  }
+  .method-second .container .method-img {
+    display: none;
+  }
+  .method-second .container .method-img-desktop {
+    display: block;
+  }
+  .method-second .container .btn {
+    font-size: 2.2rem;
+  }
+  .programs .container .programs-box .programs-card {
+    max-width: 350px;
+  }
+  .programs .container .programs-box .programs-card .img-card {
+    width: 50%;
+  }
+  .benefits .box .info-box .info-box-img {
+    margin-top: 2rem;
+    width: 10%;
+  }
+  .benefits .box .info-box .info-box-text {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 2.2rem;
+  }
+  .aboutme .box-aboutme .img-aboutme {
+    width: 40%;
+  }
+}
+@media (min-width: 1200px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+  }
+  .header .one {
+    margin-left: 7rem;
+  }
+  .header .one h2 {
+    font-size: 7rem;
+  }
+  .header .one h1 {
+    font-size: 4rem;
+  }
+  .header .one p {
+    font-size: 2rem;
+  }
+  .header .one .btn {
+    font-size: 2.2rem;
+  }
+  .header .two img {
+    width: 80%;
+  }
+  .method .box {
+    padding: 6rem 15rem;
+  }
+  .method .box .box-main-text {
+    font-size: 2.8rem;
+    margin-bottom: 6rem;
+  }
+  .method .box .box-text {
+    font-size: 2rem;
+  }
+  .method .offers-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .method .offers-box .option {
+    max-width: 1100px;
+  }
+  .method .offers-box .option .option-text {
+    font-size: 2.5rem;
+  }
+  .method-second {
+    font-size: 2.2rem;
+  }
+  .programs .container .programs-box .programs-card {
+    max-width: 400px;
+  }
+  .programs .container .programs-box .programs-card .img-card {
+    width: 70%;
+  }
+  .benefits .box .info-box .info-box-img {
+    margin-top: 4rem;
+    width: 10%;
+  }
+  .benefits .box .info-box .info-box-text {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 2.4rem;
+  }
+  .aboutme .section-title {
+    padding: 1rem 30rem;
+  }
+  .aboutme .box-aboutme .img-aboutme {
+    width: 30%;
+  }
+  .aboutme .box-aboutme .text-aboutme {
+    font-size: 2rem;
+  }
+}/*# sourceMappingURL=style.css.map */
