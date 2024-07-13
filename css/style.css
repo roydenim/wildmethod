@@ -323,7 +323,39 @@ body {
 }
 
 .benefits {
+  position: relative;
+  overflow: hidden;
   background-color: gold;
+}
+.benefits .leaf {
+  position: absolute;
+  width: 500px;
+  left: -250px;
+  transform: rotate(-10deg);
+  display: none;
+}
+.benefits .leaf-2 {
+  position: absolute;
+  right: -250px;
+  width: 500px;
+  transform: rotate(-190deg);
+  display: none;
+}
+.benefits .leaf-3 {
+  position: absolute;
+  top: 400px;
+  right: -250px;
+  width: 500px;
+  transform: rotate(-190deg);
+  display: none;
+}
+.benefits .leaf-4 {
+  position: absolute;
+  top: 400px;
+  width: 500px;
+  left: -250px;
+  transform: rotate(-10deg);
+  display: none;
 }
 .benefits .container {
   display: flex;
@@ -397,6 +429,115 @@ body {
   text-transform: uppercase;
 }
 
+.contact {
+  margin-top: 2rem;
+}
+.contact__box-one {
+  padding: 2rem;
+  background-color: gold;
+}
+.contact__box-title {
+  margin: 3rem 0;
+  font-size: 5rem;
+  color: #09363f;
+  text-transform: uppercase;
+}
+.contact__box-text {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: #09363f;
+}
+.contact__box-text p {
+  margin: 0.5em 0;
+}
+.contact__box-two {
+  padding: 2rem;
+}
+.contact__form {
+  margin: 3rem 0;
+}
+.contact__form-box {
+  margin: 1rem 0;
+  font-size: 2.4rem;
+}
+.contact textarea {
+  width: 100%;
+  min-height: 10rem;
+  min-width: 100%;
+  max-width: 100%;
+}
+.contact input,
+.contact textarea {
+  padding: 1em 1em;
+  width: 100%;
+  font-size: 1.6rem;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+.contact__form-btn {
+  padding: 1em 2em;
+  border: 1px solid black;
+  background: none;
+  font-size: 1.6rem;
+  border-radius: 8px;
+  background-color: #0e5664;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.contact__form-btn:hover {
+  background-color: #09363f;
+}
+
+.main-happy-betty,
+.main-smitty-kitty {
+  display: flex;
+  margin-top: 10rem;
+  padding: 2rem;
+}
+.main-happy-betty .one,
+.main-smitty-kitty .one {
+  max-width: 100%;
+}
+.main-happy-betty .one h2,
+.main-smitty-kitty .one h2 {
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #09363f;
+}
+.main-happy-betty .one .box,
+.main-smitty-kitty .one .box {
+  display: flex;
+  flex-direction: column;
+}
+.main-happy-betty .one .box .box-one,
+.main-happy-betty .one .box .box-two,
+.main-smitty-kitty .one .box .box-one,
+.main-smitty-kitty .one .box .box-two {
+  max-width: 400px;
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: gold;
+  border-radius: 10px;
+}
+.main-happy-betty .one .box .title-box,
+.main-smitty-kitty .one .box .title-box {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+.main-happy-betty .two,
+.main-smitty-kitty .two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-happy-betty .two img,
+.main-smitty-kitty .two img {
+  width: 80%;
+  display: none;
+}
+
 @media (min-width: 576px) {
   .offers-box .option {
     display: flex;
@@ -447,6 +588,40 @@ body {
   }
   .aboutme .box-aboutme .img-aboutme {
     width: 60%;
+  }
+  .main-happy-betty,
+  .main-smitty-kitty {
+    margin-top: 12rem;
+  }
+  .main-happy-betty .one,
+  .main-smitty-kitty .one {
+    max-width: 100%;
+  }
+  .main-happy-betty .one h2,
+  .main-smitty-kitty .one h2 {
+    margin-bottom: 2rem;
+    font-size: 4.5rem;
+    color: #09363f;
+  }
+  .main-happy-betty .one p,
+  .main-smitty-kitty .one p {
+    font-size: 1.8rem;
+  }
+  .main-happy-betty .one .box,
+  .main-smitty-kitty .one .box {
+    display: flex;
+    flex-direction: row;
+  }
+  .main-happy-betty .one .box .box-one,
+  .main-happy-betty .one .box .box-two,
+  .main-smitty-kitty .one .box .box-one,
+  .main-smitty-kitty .one .box .box-two {
+    margin-right: 2rem;
+  }
+  .main-happy-betty .one .box .title-box,
+  .main-smitty-kitty .one .box .title-box {
+    margin-bottom: 1rem;
+    font-size: 3rem;
   }
 }
 @media (min-width: 992px) {
@@ -500,6 +675,12 @@ body {
   .programs .container .programs-box .programs-card .img-card {
     width: 50%;
   }
+  .benefits .leaf,
+  .benefits .leaf-2,
+  .benefits .leaf-3,
+  .benefits .leaf-4 {
+    display: flex;
+  }
   .benefits .box .info-box .info-box-img {
     margin-top: 2rem;
     width: 10%;
@@ -511,6 +692,33 @@ body {
   }
   .aboutme .box-aboutme .img-aboutme {
     width: 40%;
+  }
+  .contact__boxes {
+    display: flex;
+  }
+  .contact__box-one {
+    padding: 5rem;
+  }
+  .contact__box-one, .contact__box-two {
+    width: 50%;
+    margin-bottom: 5rem;
+  }
+  .main-happy-betty,
+  .main-smitty-kitty {
+    margin-bottom: 4rem;
+  }
+  .main-happy-betty .one,
+  .main-smitty-kitty .one {
+    max-width: 60%;
+  }
+  .main-happy-betty .one p,
+  .main-smitty-kitty .one p {
+    font-size: 2rem;
+  }
+  .main-happy-betty .two img,
+  .main-smitty-kitty .two img {
+    display: flex;
+    width: 90%;
   }
 }
 @media (min-width: 1200px) {
